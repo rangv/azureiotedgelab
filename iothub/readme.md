@@ -11,13 +11,46 @@
 
 ### Install VSCode Editor
 
-Open VSCode Editor. If you have not installed VSCode, Click [here](https://code.visualstudio.com/) and download the IDE based on your machine OS. macOS, Windows and Linux are supported.
+If you have not installed VSCode, Click [here](https://code.visualstudio.com/) and download the IDE based on your machine OS. macOS, Windows and Linux are supported.
+
+Open VSCode Editor.
+
+## VSCode IoT Extensions
+
+Install Azure IoT VSCode Extensions
+
+![Extensions](/iothub/images/06_extensions.png)
+
+Azure IoT supports 3 extensions
+
+1. **Azure IoT Edge Tools** makes it easy to code, build, deploy, and debug your IoT Edge solutions.
+
+    * Create new Azure IoT Edge project
+    * Add new IoT Edge module (C#) to solution
+    * Edit, build, run, and debug IoT Edge modules locally on your machine
+    * Build and publish IoT Edge module Docker images
+    * Manage IoT Edge devices and modules in IoT Hub (with Cloud Explorer)
+    * Deploy IoT solutions to IoT Edge devices
+
+2. **Azure IoT Toolkit** helps with Interact with Azure IoT Hub, IoT Device Management, IoT Edge Management and IoT Hub Code Generation.
+
+    * IoT Hub Management
+    * Device Management
+    * Edge Module Management
+    * Interact with IoT Hub
+    * Interact with IoT Edge
+
+3. **Azure IoT Workbench**, the IoT Workbench extension makes it easy to code, build, deploy and debug your IoT project with multiple Azure services and popular IoT development boards. IoT Workbench aims to support multiple popular IoT development boards and kits. It currently supports following IoT hardware:
+    * MXChip IoT DevKit
+    * teXXmo IoT button
+    * Raspberry Pi
+    * ESP32
+
+### Sign-in to Azure
 
 ```editor
 Press (Control + Shift + P) in VSCode editor.
 ```
-
-### Sign-in to Azure
 
 If you have not signed-in into Azure from VSCode you will be presented with a dialog to sign in to Azure.
 
