@@ -55,3 +55,71 @@ Connect this VM to your IoT Hub by setting the connection string with the run co
     ```
 
     ![Azure IoT Edge VM](/marketplacedeployment/images/09_edge_version.png)
+
+### Add Edge Device to IoT Hub
+
+Use VSCode to create Edge Device.
+
+    ```Editor
+    Control + Shift + P
+
+    Search for Azure IoT Edge tools
+
+    > Azure IoT Edge Create IoT Edge
+    ```
+
+#### Add Edge Device
+
+Select Create Edge Device option
+
+![Add Device](/marketplacedeployment/images/10_create_edge_device.png)
+
+Enter Device ID and press **Enter**
+
+![Device Id](/marketplacedeployment/images/11_create_edge_device.png)
+
+#### Edge Device Created
+
+Edge device created, you can check the response in VSCode output
+
+![Device Created](/marketplacedeployment/images/12_created_edge_device.png)
+### Get IoT Hub Connection String
+
+Use IoT Toolkit to copy IoT Hub connection string.
+
+```editor
+Press Control + Shift + P in the VSCode editor
+
+Enter >Azure IoT Hub
+
+```
+Select **Copy IoTHub Connection String** option
+
+![Connection String](/iothub/images/08_connection_string.png)
+
+When you press **Control+V** you will see a string like below
+
+```editor
+HostName=rvedgehub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=hQQIpzsdSf3YC3R1ckcLx4qBA3FdtBo5nkr3m19=
+```
+
+Another way to get connection string is to go to Portal and find your IoT Hub -> Shared access polocies -> iothubowner -> Connection string - primary key. Copy the connection string primary key.
+
+![Connection String](/iothub/images/07_connection_string.png)
+
+### Connect Edge Device to IoT Hub
+
+Go To cloud shell. **ssh** into your Linux VM.
+**sudo** into your VM as root
+
+```Linux
+sudo su -
+```
+
+and run the following command. Replace your IoT Hub connection string.
+
+```editor
+/etc/iotedge/configedge.sh  "<your_iothub_edge_connection_string>"
+```
+
+![Set Connection String](/iothub/images/09_set_connection_string.png)
