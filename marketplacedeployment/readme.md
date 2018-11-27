@@ -83,6 +83,7 @@ Enter Device ID and press **Enter**
 Edge device created, you can check the response in VSCode output
 
 ![Device Created](/marketplacedeployment/images/12_created_edge_device.png)
+
 ### Get IoT Hub Connection String
 
 Use IoT Toolkit to copy IoT Hub connection string.
@@ -93,19 +94,24 @@ Press Control + Shift + P in the VSCode editor
 Enter >Azure IoT Hub
 
 ```
-Select **Copy IoTHub Connection String** option
 
-![Connection String](/iothub/images/08_connection_string.png)
+Select **Copy IoTHub Device Connection String** option
+
+![Connection String](/marketplacedeployment/images/13_device_connection_string.png)
+
+You will be presented with device list. Select your edge device
+
+![Connection String](/marketplacedeployment/images/14_select_edge_device.png)
 
 When you press **Control+V** you will see a string like below
 
 ```editor
-HostName=rvedgehub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=hQQIpzsdSf3YC3R1ckcLx4qBA3FdtBo5nkr3m19=
+HostName=rvedgehub.azure-devices.net;DeviceId=mylinuxedge;SharedAccessKey=sZTt4dg3lB/i39b5L6vWuNuZxH7CCWzz7T6q8eA19PQ=
 ```
 
-Another way to get connection string is to go to Portal and find your IoT Hub -> Shared access polocies -> iothubowner -> Connection string - primary key. Copy the connection string primary key.
+Another way to get connection string is to go to Portal and find your IoT Hub -> -> IoT Edge Device -> Your Edge Device ->  Connection string - primary key. Copy the connection string primary key.
 
-![Connection String](/iothub/images/07_connection_string.png)
+![Connection String](/marketplacedeployment/images/15_device_details.png)
 
 ### Connect Edge Device to IoT Hub
 
@@ -119,7 +125,11 @@ sudo su -
 and run the following command. Replace your IoT Hub connection string.
 
 ```editor
-/etc/iotedge/configedge.sh  "<your_iothub_edge_connection_string>"
+/etc/iotedge/configedge.sh  "<your_iothub_edge_device_connection_string>"
 ```
 
-![Set Connection String](/iothub/images/09_set_connection_string.png)
+![Set Connection String](/marketplacedeployment/images/16_attach_device.png)
+
+EdgeAgent System Module is sent to the edge device
+
+![Module List](/marketplacedeployment/images/17_edge_module_list.png)
