@@ -8,11 +8,11 @@ One of the key capabilities of Azure IoT Edge is being able to deploy modules to
 
 In the Azure portal
 
-    * Navigate to your IoT hub.
+* Navigate to your IoT hub.
 
-    * Go to IoT Edge under Automatic Device Management and select your IoT Edge device.
+* Go to IoT Edge under Automatic Device Management and select your IoT Edge device.
 
-    * Select Set Modules.
+* Select Set Modules.
   
 A three-step wizard opens in the portal, which guides you through
 
