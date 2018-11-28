@@ -8,7 +8,9 @@
             ],
             "forcedInclude": [
                 "C:\\Users\\rangv\\AppData\\Local\\Arduino15\\packages\\AZ3166\\hardware\\stm32f4\\1.4.1\\cores\\arduino\\Arduino.h"
-            ]
+            ],
+            "intelliSenseMode": "msvc-x64"
         }
-    ]
+    ],
+    "version": 4
 }

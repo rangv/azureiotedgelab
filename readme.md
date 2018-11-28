@@ -26,6 +26,7 @@ In this workshop you will:
 * [Module 1 - Learn About IoT Edge Pattern](pattern)
 * [Module 2 - Create IoT HuB using VSCode](iothub)
 * [Module 3 - Deploy Azure IoT Edge Enabled Linux VM](marketplacedeployment)
+* [Module 4 - Add an Edge Module and Deploy](edgemodule)
 
 ## Useful Resources
 
