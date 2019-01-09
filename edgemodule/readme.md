@@ -33,7 +33,7 @@ In the Add Modules step of the wizard, find the Deployment Modules section. Clic
 
 Use the Temperature Sensor Simulator pre-built module.
 
-In the Name field, enter tempSensor.
+In the Name field, enter tempsensor.
 
 In the Image URI field, enter mcr.microsoft.com/azureiotedge-simulated-temperature-sensor:1.0.
 
