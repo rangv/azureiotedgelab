@@ -235,18 +235,19 @@ The Azure IoT Edge extension for Visual Studio Code that you installed provides 
     {
         "routes": {
         "telemetryToCloud": "FROM /messages/modules/tempsensor/* INTO $upstream",
-        "alertsToCloud": "FROM /messages/modules/rvasa/* INTO $upstream",
-        "alertsToReset": "FROM /messages/modules/rvasa/* INTO BrokeredEndpoint(\"/modules/tempsensor/inputs/control\")",
-        "telemetryToAsa": "FROM /messages/modules/tempsensor/* INTO BrokeredEndpoint(\"/modules/rvasa/inputs/temperature\")",
         "FilterFunctionToIoTHub": "FROM /messages/modules/FilterFunction/outputs/* INTO $upstream",
         "sensorToFilterFunction": "FROM /messages/modules/tempsensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/FilterFunction/inputs/input1\")"
         }
     }
     ```
+    
+    ![Routes](images/23_tempsensor.png)
+
+    This replaces the existing route which takes the output of the **tempsensor** module and sends it to **\$upstream** (which is the IoT Hub in the cloud). The new routes take the output of **tempsensor** and routes it to the **FilterFunction** and then takes the output from **FilterFunction** and routes it to **$upstream** .
 
     ![Routes](images/16_filterfunctionroutes.png)
 
-    This replaces the existing route which takes the output of the **tempsensor** module and sends it to **\$upstream** (which is the IoT Hub in the cloud). The new routes take the output of **tempsensor** and routes it to the **FilterFunction** and then takes the output from **FilterFunction** and routes it to **$upstream** .
+    Also change the tempsensor module name from tempSensor to tempsensor. It is case sensitive.
 
 16. Open the **.env** file in your IoT Edge solution workspace. 
 
@@ -282,48 +283,43 @@ Visual Studio Code outputs a success message when your container image is pushed
 
     The **Repository** blade will open. In the Tags section, you should see the **0.0.1-amd64** tag. This tag indicates the version and platform of the image that you built. These values are set in the **module.json** file in the FilterFunction folder.
 
+
+    ![Filter Function Image](images/18_filterfunction_containerregistry.png)
+
 ### Deploy and Run the Solution
 
 You can use the Azure portal to deploy your function module to an IoT Edge device like you did in the quickstarts. You can also deploy and monitor modules from within Visual Studio Code. The following sections use the Azure IoT Edge extension for VS Code that was listed in the prerequisites. Install the extension now, if you didn't already.
 
-1. In Visual Studio Code, open the Command Palette by pressing **CONTROL + SHIFT + P** and enter **Azure: Sign in**
+1. In Visual Studio Code, open the Command Palette by pressing **CONTROL + SHIFT + P** and enter **Azure IoT Hub: Select IoT Hub**.
 
-    In the filtered list of commands, select **Azure: Sign in**.
+2. Select the subscription that has your IoT hub.
 
-    A notification will appear.
+3. Select the IoT hub that you want to access.
 
-2. On the notification, click **Copy & Open**.
+4. In the VS Code explorer, expand the Azure IoT Hub Devices section.
 
-    A code will be copied into the clipboard and a web browser will open and display the login page.
+    ![Filter Function Image](images/19_edge_device_list.png)
 
-3. In the web browser, under **Code**, paste the device code.
 
-    The web page will automatically check the code and will determin that Visual Studio Code is the source.
+5. Right-click the name of your IoT Edge device, and then click **Create Deployment for single device**.
 
-4. On the web page, click **Continue** and login to Azure.
+6. In the **Open** dialog, browse to the solution folder that contains the FilterFunction. 
 
-    Once the login succeeds, you may close the web page. Visual Studio Code is now logged in. You will see a message in the Visual Studio Code statusbar `Azure: <your username>`. 
+7. Open the **config** folder, select the **deployment.amd64.json** file and then click **Select Edge Deployment Manifest**.
 
-5. In Visual Studio Code, open the Command Palette by pressing **CONTROL + SHIFT + P** and enter **Azure IoT Hub: Select IoT Hub**.
+    ![Filter Function Image](images/20_deployment_json.png)
 
-6. Select the subscription that has your IoT hub.
+    ![Filter Function Image](images/21_deployment_succeeded.png)
 
-7. Select the IoT hub that you want to access.
 
-8. In the VS Code explorer, expand the Azure IoT Hub Devices section.
-
-9. Right-click the name of your IoT Edge device, and then click **Create Deployment for single device**.
-
-10. In the **Open** dialog, browse to the solution folder that contains the CSharpFunction. 
-
-11. Open the **config** folder, select the **deployment.amd64.json** file and then click **Select Edge Deployment Manifest**.
-
-12. Refresh the **Azure IoT Hub Devices** section. You should see the new `FilterFunction` running along with the `tempsensor` module and the `$edgeAgent` and `$edgeHub`.
+8. Refresh the **Azure IoT Hub Devices** section. You should see the new `FilterFunction` running along with the `tempsensor` module and the `$edgeAgent` and `$edgeHub`.
 
     It may take a few moments for the new modules to show up. Your IoT Edge device has to retrieve its new deployment information from IoT Hub, start the new containers, and then report the status back to IoT Hub.
 
-13. To see all of the messages that arrive at your IoT hub, open the Command Palette by pressing **CONTROL + SHIFT + P** and enter **Azure IoT Hub: Start Monitoring D2C Message**.
+    ![Filter Function Image](images/22_devicedeployments.png)
 
-14. To filter the view to see all of the messages that arrive at your IoT hub from a specific device, right-click the device in the Azure IoT Hub Devices section and select **Start Monitoring D2C Messages**.
+9.  To see all of the messages that arrive at your IoT hub, open the Command Palette by pressing **CONTROL + SHIFT + P** and enter **Azure IoT Hub: Start Monitoring D2C Message**.
 
-15. To stop monitoring messages, open the Command Palette by pressing **CONTROL + SHIFT + P** and enter **Azure IoT Hub: Stop monitoring D2C message**.
+10. To filter the view to see all of the messages that arrive at your IoT hub from a specific device, right-click the device in the Azure IoT Hub Devices section and select **Start Monitoring D2C Messages**.
+
+11. To stop monitoring messages, open the Command Palette by pressing **CONTROL + SHIFT + P** and enter **Azure IoT Hub: Stop monitoring D2C message**.
