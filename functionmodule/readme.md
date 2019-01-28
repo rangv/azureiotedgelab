@@ -202,9 +202,13 @@ The Azure IoT Edge extension for Visual Studio Code that you installed provides 
 
 11. Save the changes to the of the **FilterFunction.cs** file.
 
-12. Open the VS Code integrated terminal by selecting View > Terminal.
+12. If your project shows error do a **dotnet restore**. Open a terminal and go to your project modules folder and type in **dotnet restore**. Once done close the FilterFunction.cs file and reopen. 
 
-13. Sign in to your container registry by entering the following command in the integrated terminal. 
+    ![Container Registry Credentials](images/15_dotnet_restore.png)
+
+13. Open the VS Code integrated terminal by selecting View > Terminal.
+
+14. Sign in to your container registry by entering the following command in the integrated terminal. 
 
     Use the username and login server that you copied from your Azure container registry earlier.
 
@@ -221,11 +225,11 @@ The Azure IoT Edge extension for Visual Studio Code that you installed provides 
 
     Hit **ENTER** to submit the password.
 
-14. In the VS Code explorer, open the **deployment.template.json** file in your IoT Edge solution workspace.
+15. In the VS Code explorer, open the **deployment.template.json** file in your IoT Edge solution workspace.
 
     This file tells the IoT Edge runtime which modules to deploy to a device. Notice that your Function module, **FilterFunction** is listed along with the **tempsensor** module we deployed in an earlier task, that provides test data.
 
-    If you scroll down to line 86, you will see a definition for the routes on the IoTEdge module:
+    If you scroll down to line 87, you will see a definition for the routes on the IoTEdge module:
 
     ```json 
     {
@@ -240,21 +244,25 @@ The Azure IoT Edge extension for Visual Studio Code that you installed provides 
     }
     ```
 
+    ![Routes](images/16_filterfunctionroutes.png)
+
     This replaces the existing route which takes the output of the **tempsensor** module and sends it to **\$upstream** (which is the IoT Hub in the cloud). The new routes take the output of **tempsensor** and routes it to the **FilterFunction** and then takes the output from **FilterFunction** and routes it to **$upstream** .
 
-15. Open the **.env** file in your IoT Edge solution workspace. 
+16. Open the **.env** file in your IoT Edge solution workspace. 
 
     This git-ignored file stores your container registry credentials so that you don't have to put them in the deployment manifest template. Provide the username and password for your container registry.
 
-16. In the **.env** file, provide the username and password for the Azure Container Registry.
+17. In the **.env** file, provide the username and password for the Azure Container Registry.
 
-17. Save the changes to the **.env** file.
+18. Save the changes to the **.env** file.
 
-18. In the VS Code explorer, right-click the **deployment.template.json** file and select **Build and Push IoT Edge solution**.
+19. In the VS Code explorer, right-click the **deployment.template.json** file and select **Build and Push IoT Edge solution**.
 
     When you tell Visual Studio Code to build your solution, it first takes the information in the deployment template and generates a deployment.json file in a new folder named config. Then it runs two commands in the integrated terminal: docker build and docker push. These two commands build your code, containerize the functions, and then push the code to the container registry that you specified when you initialized the solution.
 
     You will see a lot of output generated during the process.
+
+    ![Build and Push](images/17_buildandpush.png)
 
 ### View your Container Image
 
