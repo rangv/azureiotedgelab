@@ -14,7 +14,7 @@ Connect this VM to your IoT Hub by setting the connection string with the run co
 
 ## Steps to Create VM
 
-1. Click [here](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft_iot_edge.iot_edge_vm_ubuntu?tab=Overview) to deploy an Azure IoT Edge enabled Linux VM.
+1. Click <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft_iot_edge.iot_edge_vm_ubuntu?tab=Overview" target="_blank">here</a> to deploy an Azure IoT Edge enabled Linux VM.
 
     ![Azure IoT Edge VM](/marketplacedeployment/images/01_marketplace_offering.png)
 
@@ -38,10 +38,27 @@ Connect this VM to your IoT Hub by setting the connection string with the run co
 7. Click on **Go To Resource** button
 
 8. Click on **Connect** button and copy the ssh command
+
     ![Azure IoT Edge VM](/marketplacedeployment/images/07_connect_ssh.png)
 
-9. Click on **Cloud Shell icon**, opens a cloud shell on the browser. Copy the shh command and press enter
+9. Click on **Cloud Shell icon**, opens a cloud shell on the browser. Copy the shh command and press enter or you can use **shell.azure.com** in your browser
+
     ![Azure IoT Edge VM](/marketplacedeployment/images/08_cloud_shell_ssh.png)
+
+    You will be prompted with **Bash** or **PowerShell**. Select **Bash** for this workshop
+
+    ![Shell](/marketplacedeployment/images/18_shell_bash.png)
+
+    Select your subscription and create storage account
+
+    ![Shell](/marketplacedeployment/images/19_storage_mount.png)
+
+    You will get a prompt
+
+    ![Shell](/marketplacedeployment/images/20_shell_created.png)
+
+
+
 
     ```Linux
     ssh iotedgeadmin@<Your VM IP>
