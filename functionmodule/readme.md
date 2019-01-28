@@ -318,6 +318,19 @@ You can use the Azure portal to deploy your function module to an IoT Edge devic
 
     ![Filter Function Image](images/22_devicedeployments.png)
 
+    Once the deployment completes you will see the following view
+
+    ![Filter Function Image](images/26_filterfunctiondevice.png)
+
+    On the portal
+
+    ![Filter Function Image](images/24_filterfunction.png)
+
+    On Linux VM
+
+    ![Filter Function Deployed](images/25_filterfunction_deployed.png)
+
+
 9.  To see all of the messages that arrive at your IoT hub, open the Command Palette by pressing **CONTROL + SHIFT + P** and enter **Azure IoT Hub: Start Monitoring D2C Message**.
 
 10. To filter the view to see all of the messages that arrive at your IoT hub from a specific device, right-click the device in the Azure IoT Hub Devices section and select **Start Monitoring D2C Messages**.
