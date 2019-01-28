@@ -28,7 +28,7 @@ In this workshop you will:
 * [Module 3 - Deploy Azure IoT Edge Enabled Linux VM](marketplacedeployment)
 * [Module 4 - Add an Edge Module and Deploy](edgemodule)
 * [Module 5 - Deploy Azure Stream Analytics on Edge](streamanalytics)
-* [Module 6 - Depploy Azure Function on Edge](filterfunction)
+* [Module 6 - Depploy Azure Function on Edge](functionmodule)
 
 ## Useful Resources
 
