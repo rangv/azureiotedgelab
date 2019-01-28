@@ -50,7 +50,16 @@ Azure IoT supports 3 extensions
 
 ```editor
 Press (Control + Shift + P) in VSCode editor.
+Enter >Azure:Sign in to Azure Cloud
 ```
+
+Select Sign In to Azure Cloud
+
+![Sign In](/iothub/images/10_azure_signin.png)
+
+Select Your Azure Cloud
+
+![Sign In](/iothub/images/11_azure.png)
 
 If you have not signed-in into Azure from VSCode you will be presented with a dialog to sign in to Azure.
 
