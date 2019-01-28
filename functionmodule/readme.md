@@ -36,7 +36,7 @@ To create Azure Functions locally using Visual Studio Code you will need .NET Co
 
 #### Download Docker
 
-Go To [Azure Portal](https://docs.docker.com/install/) to Install Docker for Windows or Mac. 
+Go To [Docker](https://docs.docker.com/install/) to Install Docker for Windows or Mac. 
 
 
 #### Verify Installation
