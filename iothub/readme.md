@@ -69,15 +69,31 @@ A browser URL and code will be provided. Click **Copy**, go to browser and type 
 
 ### Create IoT Hub Instance
 
-Once successfully signed-in to Azure you will be presented with a Subscription list.
+Sign in to Azure. 
+
+![Azure Signin](/iothub/images/12_azure_signin.png)
+
+Once successfully signed-in to Azure 
+
+1. Create IoT Hub 
+
+![Create IoT Hub](/iothub/images/13_azure_create_iothub.png)
+
+2. Select the subscription you would like to use for this lab.
 
 ![Select Subscription](/iothub/images/03_select_subscription.png)
+   
+3. Create a resource group or select an existing resource group.
 
-1. Select the subscription you would like to use for this lab.
-2. Create a resource group or select an existing resource group.
-3. Select the region in which you would like to create the IoT Hub
-4. Select Pricing and scale tier. For this lab you can select a **Basic** or **Standard** Tier.
-5. Provide a name to your IoT Hub. Make sure its a unique name
+![Create Resource Group ](/iothub/images/14_create_resourcegroup.png)
+ 
+4. Select the region in which you would like to create the IoT Hub
+
+![Select Region](/iothub/images/15_select_region.png)
+
+5. Select Pricing and scale tier. For this lab you can select a **Standard** Tier (S1).
+   
+6. Provide a name to your IoT Hub. Make sure its a unique name. Try to qualify with your initials
 
 An IoT Hub will be created for you.
 
