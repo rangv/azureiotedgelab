@@ -41,7 +41,7 @@ Connect this VM to your IoT Hub by setting the connection string with the run co
 
     ![Azure IoT Edge VM](/marketplacedeployment/images/07_connect_ssh.png)
 
-9. Click on **Cloud Shell icon**, opens a cloud shell on the browser. Copy the shh command and press enter or you can use **shell.azure.com** in your browser
+9. Click on **Cloud Shell icon**, opens a cloud shell on the browser. Copy the ssh command and press enter or you can use **shell.azure.com** in your browser
 
     ![Azure IoT Edge VM](/marketplacedeployment/images/08_cloud_shell_ssh.png)
 
