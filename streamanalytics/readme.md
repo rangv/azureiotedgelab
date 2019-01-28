@@ -222,11 +222,11 @@ For this task, you deploy two modules. The first is the **tempsensor** module we
 
 13. At the bottom of the **Specify Routes** step, click **Next**.
 
-    The **Review Deployment** step is displayed. If you review the JSON you will see the routes we just added as well as the **StreamAnalyticsJob** module definition.
+    The **Review Deployment** step is displayed. If you review the JSON you will see the routes we just added as well as the **Stream Analytics Job** module definition. In this example the StreamAnalyticsJob name is **rvasa**.
 
 14. At the bottom of the **Review Deployment** step, click **Submit** (it is on the far right).
 
-    The **Set Modules** pane closes and returns to the **Device details** pane. The **Modules** list should be updated to include the **StreamAnalyticsJob** module
+    The **Set Modules** pane closes and returns to the **Device details** pane. The **Modules** list should be updated to include the **rvasa** module
 
     In the **Device details** pane toolbar, click **Refresh** and the values should update to indicate the module has been deployed and is running.
 
@@ -262,3 +262,7 @@ For this task, you deploy two modules. The first is the **tempsensor** module we
     ```
     
     As the command suggest, this will restart the **tempsensor** module so that messages are sent again.
+
+    ![Module Lust](images/12_reset.png)
+
+
