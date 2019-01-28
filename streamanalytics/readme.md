@@ -72,7 +72,7 @@ When you create an Azure Stream Analytics job to run on an IoT Edge device, it n
 
 13. At the bottom of the **New input** popup, click **Save**.
 
-    ![Input](images/06edgeoutput.png)
+    ![Input](images/05edgeasainput.png)
 
     The **New input** popup closes and the **Inputs** pane is displayed. The new stream input should be listed.
 
@@ -207,11 +207,11 @@ For this task, you deploy two modules. The first is the **tempsensor** module we
 
     ```json
     {
-        "routes": {
-            "telemetryToCloud": "FROM /messages/modules/tempsensor/* INTO $upstream",
-            "alertsToCloud": "FROM /messages/modules/StreamAnalyticsJob/* INTO $upstream",
-            "alertsToReset": "FROM /messages/modules/StreamAnalyticsJob/* INTO BrokeredEndpoint(\"/modules/tempsensor/inputs/control\")",
-            "telemetryToAsa": "FROM /messages/modules/tempsensor/* INTO BrokeredEndpoint(\"/modules/StreamAnalyticsJob/inputs/temperature\")"
+    "routes": {
+        "telemetryToCloud": "FROM /messages/modules/tempsensor/* INTO $upstream",
+        "alertsToCloud": "FROM /messages/modules/rvasa/* INTO $upstream",
+        "alertsToReset": "FROM /messages/modules/rvasa/* INTO BrokeredEndpoint(\"/modules/tempsensor/inputs/control\")",
+        "telemetryToAsa": "FROM /messages/modules/tempsensor/* INTO BrokeredEndpoint(\"/modules/rvasa/inputs/temperature\")"
         }
     }
     ```

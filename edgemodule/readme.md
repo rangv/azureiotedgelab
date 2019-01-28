@@ -39,6 +39,9 @@ In the Image URI field, enter mcr.microsoft.com/azureiotedge-simulated-temperatu
 
 Leave the other settings unchanged, and select Save.
 
+**Note:** Module will send 500 messages, you will have to restart the module to resend the messages. You can add an envirnment variable MessageCount to the number of messages that should be sent (set it to -1 to send unlimited messages)
+
+
 ![Temp Sensor](/edgemodule/images/04_edge_tempsensor.png)
 
 In the Specify Routes step of the wizard, you should have a default route that sends all messages from all modules to IoT Hub. If not, add the following code then Click **Next**
