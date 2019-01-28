@@ -84,3 +84,9 @@ iotedge logs tempsensor
 ```
 
 ![telemetry](/edgemodule/images/10_edge_telemetry.png)
+
+ **Note**: tempsensor module will stop sending messages after 500 messages have been sent. You can restart it using the following command:
+
+    ```shell
+    iotedge restart tempsensor
+    ```
