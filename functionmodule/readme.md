@@ -27,94 +27,22 @@ To create Azure Functions locally using Visual Studio Code you will need .NET Co
     You should see a response similar to:
 
     ```script
-    Microsoft Windows [Version 10.0.18267.1001]
-    (c) 2018 Microsoft Corporation. All rights reserved.
-
     C:\>dotnet --version
     2.2.100
 
     C:\>
     ```
 
-You have now installed .NET Core.
 
 #### Download Docker
 
-In this task, you will install Docker on your Windows PC.
+Go To [Azure Portal](https://docs.docker.com/install/) to Install Docker for Windows or Mac. 
 
-1. Before you begin, consider saving your work and closing application windows that you don't need at this time.
-
-    Installing Docker and running it for the first time is likely to require one or more system reboots. We recommend saving your work and closing any apps that you don't really need to have open at this time.
-
-2. Open a browser window, and review the Docker for Windows documentation [here](https://docs.docker.com/docker-for-windows/).
-
-    Notice that this documentation page provides a link to system requirements.
-
-3. Navigate to the Docker for Windows installation guide.
-
-    You can open the link on the documentation page above, or use the link [here](https://docs.docker.com/docker-for-windows/install/).
-
-4. On the **Install Docker for Windows page**, click **Download from Docker Store**.
-
-5. On the **Docker Community Edition for Windows**, click **Please Login to Download**.
-
-    If you have a docker username and password, jump down to **Install Docker** below, otherwise, continue to **Create a Docker Account**.
-
-#### Create a Docker Account
-
-1. On the **Welcome to Docker** page, click **Create Account**
-
-2. On the account creation page, under **Choose a Docker ID**, enter a unique ID.
-
-3. Under **Email**, enter the email you wish to use.
-
-4. Under **Password**, enter a strong password.
-
-5. Read the **Terms of Service** and, if you agree, select **I agree to Docker's Terms of Service**.
-
-6. Read the **Privacy Policy and Data Processing Terms** and, if you agree, select **I agree to Docker's Privacy Policy and Data Processing Terms**.
-
-7. If you desire to receive email from Docker, select **I would like to receive email updates from Docker, including its various services and products**.
-
-8. Complete the **I am not a robot** captcha.
-
-9. Check you email and click on the email verification link.
-
-Now you have created and verified an account, return to the login page.
-
-#### Install Docker
-
-1. On the **Welcome to Docker** page, enter your username and password, the click **Login**.
-
-2. On the **Docker Community Edition for Windows**, click **Get Docker**.
-
-3. Once the **Docker for Windows Installer** download has completed, click **Run** (if you aren't prompted to run, find the downloaded installer and run it).
-
-    If a Windows **User Account Control** prompt is displayed, click **Yes**.
-
-    The Docker for Windows installer will then download and install the necessary components.
-
-4. In the **Installing Docker for Windows** window, on the **Configuration** pane, ensure **Use Windows containers...** is not selected, then click **Ok**.
-
-    The installer will then unpack files.
-
-5. Once installation has completed, click **Close and logout**.
-
-    Docker will create a shortcut on the Desktop, or it can be found in the Start menu.
-
-6. Log back in and Run Docker for Windows.
-
-    The first launch may take a few minutes.
-
-    The whale icon in the notification area indicates that Docker is running, and accessible from a terminal. If the whale is hidden in the Notifications area, click the up arrow on the taskbar to show it. 
 
 #### Verify Installation
 
-We can run a few simple docker commands to verify that it is installed correctly.
 
-1. Open the Windows **Start** menu, search for **cmd** and launch it.
-
-2. In the **Command Prompt** window, enter the following:
+1. In the **Command Prompt** window, enter the following:
 
     ```command
     docker --version
