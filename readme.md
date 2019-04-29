@@ -25,6 +25,8 @@ In this workshop you will:
 
 [![screenshot](images/module1card.png)](pattern)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![screenshot](images/module2card.png)](iothub)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![screenshot](images/module3card.png)](marketplacedeployment)
 
+[![screenshot](images/module4card.png)](edgemodule)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 * [Module 1 - Learn About IoT Edge Pattern](pattern)
 * [Module 2 - Create IoT HuB using VSCode](iothub)
 * [Module 3 - Deploy Azure IoT Edge Enabled Linux VM](marketplacedeployment)
