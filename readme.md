@@ -23,20 +23,11 @@ In this workshop you will:
 
 ## Modules
 
-[![screenshot](images/module1card.png)](pattern)&nbsp;[![screenshot](images/module2card.png)](iothub)&nbsp;
+[![screenshot](images/module1card.png)](pattern)&nbsp;&nbsp;&nbsp;&nbsp;[![screenshot](images/module2card.png)](iothub)&nbsp;
 
+[![screenshot](images/module3card.png)](marketplacedeployment)&nbsp;&nbsp;&nbsp;&nbsp;[![screenshot](images/module4card.png)](edgemodule)&nbsp;
 
-[![screenshot](images/module3card.png)](marketplacedeployment)&nbsp;[![screenshot](images/module4card.png)](edgemodule)&nbsp;
-
-
-[![screenshot](images/module5card.png)](streamanalytics)&nbsp;[![screenshot](images/module6card.png)](functionmodule)&nbsp;
-
-* [Module 1 - Learn About IoT Edge Pattern](pattern)
-* [Module 2 - Create IoT HuB using VSCode](iothub)
-* [Module 3 - Deploy Azure IoT Edge Enabled Linux VM](marketplacedeployment)
-* [Module 4 - Add an Edge Module and Deploy](edgemodule)
-* [Module 5 - Deploy Azure Stream Analytics on Edge](streamanalytics)
-* [Module 6 - Deploy Azure Function on Edge](functionmodule)
+[![screenshot](images/module5card.png)](streamanalytics)&nbsp;&nbsp;&nbsp;&nbsp;[![screenshot](images/module6card.png)](functionmodule)&nbsp;
 
 ## Useful Resources
 
